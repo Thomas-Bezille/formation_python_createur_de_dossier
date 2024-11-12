@@ -1,6 +1,6 @@
 from pathlib import Path
 
-path = Path("/c/xampp/htdocs/DEV/PYTHON/formation_python_createur_de_dossier/dossier_test")
+path = Path("c:/xampp/htdocs/DEV/PYTHON/formation_python_createur_de_dossier/dossier_test")
 folder_architecture = {
     "Film": [
         "Le seigneur des anneaux",
@@ -20,3 +20,6 @@ folder_architecture = {
     ]
 }
 
+for folder in folder_architecture.keys():
+    folder_to_create = path / folder
+    folder_to_create.mkdir(exist_ok=True)
